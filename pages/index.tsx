@@ -19,7 +19,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Naaext.js Blog Example with {CMS_NAME}</title>
+          <title>1Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
           <Intro />
