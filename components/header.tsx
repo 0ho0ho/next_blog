@@ -5,7 +5,7 @@ interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = () => {
   return (
-    <div className="p-5 text-3xl text-center">
+    <div className="py-10 text-3xl text-center">
       <Link href="/">
         <a>HO</a>
       </Link>
