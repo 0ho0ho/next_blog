@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import markdownStyles from "./markdown-styles.module.css";
 
 type Props = {
@@ -5,6 +6,17 @@ type Props = {
 };
 
 const PostBody = ({ content }: Props) => {
+  useEffect(() => {
+    let script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute("repo", "0ho0ho/0ho0ho.github.io");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("crossorigin", "anonymous");
+
+    document.getElementById("utterances")?.appendChild(script);
+  });
+
   return (
     <>
       <div className="max-w-2xl mx-auto">
@@ -13,14 +25,7 @@ const PostBody = ({ content }: Props) => {
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
-      <script
-        src="https://utteranc.es/client.js"
-        repo="0ho0ho/0ho0ho.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossOrigin="anonymous"
-        async
-      />
+      <div id="utterances"></div>
     </>
   );
 };
