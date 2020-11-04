@@ -6,14 +6,17 @@ type Props = {
   slug?: string;
 };
 
-const CoverImage = ({ title, src }: Props) => {
-  return (
-    <img
-      className="absolute h-full"
-      src={src}
-      alt={`Cover Image for ${title}`}
-    />
-  );
+const CoverImage = ({ title, src, slug }: Props) => {
+  if (slug)
+    return (
+      <img
+        className="absolute h-full"
+        src={src}
+        alt={`Cover Image for ${title}`}
+      />
+    );
+
+  return <img className="" src={src} />;
 };
 
 export default CoverImage;

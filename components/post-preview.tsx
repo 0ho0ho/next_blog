@@ -19,10 +19,10 @@ const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
         <div className="border-solid border rounded-xl border-gray-400 p-5">
           <div className="flex">
             <div className="inline-block">
-              <h3 className="text-2xl mb-3 leading-snug font-bold text-gray-800">
+              <h3 className="text-2xl mb-3 leading-snug font-medium text-gray-800">
                 <p>{title}</p>
               </h3>
-              <p className="text-lg leading-relaxed mb-4 text-gray-700">
+              <p className="text-lg leading-relaxed mb-4 text-gray-700 font-normal">
                 {excerpt}
               </p>
               <div className="text-lg mb-4 text-gray-500">
