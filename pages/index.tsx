@@ -15,7 +15,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title> bkog</title>
+          <title>blog</title>
         </Head>
         <Container>
           <MoreStories posts={posts} />
@@ -28,13 +28,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "coverImage",
-    "excerpt",
-  ]);
+  const allPosts = getAllPosts(["title", "date", "slug", "excerpt"]);
 
   return {
     props: { allPosts },

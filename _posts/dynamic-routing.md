@@ -1,7 +1,6 @@
 ---
-title: "Dynamic Routing and Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+title: "내가 토이 프로젝트 경험을 공유하는 이유"
+excerpt: "필자는 친구들과 함께 하고 있는 루비콘이라는 팀에서 토이 프로젝트 멘토링을 재능 기부 형식으로 진행하고 있는데, 많은 분들이 도대체 돈도 안 받으면서 왜 이런 프로젝트를 왜 진행하는지, 얻고자 하는 것이 무엇인지에 대해 많이 물어보셔서 그에 대한 필자의 생각을 적어보려고 한다."
 date: "2020-03-16T05:35:07.322Z"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"

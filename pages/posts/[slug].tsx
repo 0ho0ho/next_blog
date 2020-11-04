@@ -33,11 +33,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <title>{post.title} | Next.js Blog Example with</title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-              />
+              <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
             </article>
           </>
@@ -62,7 +58,6 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "content",
     "ogImage",
-    "coverImage",
   ]);
   const content = await markdownToHtml(post.content || "");
 

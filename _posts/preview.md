@@ -1,7 +1,6 @@
 ---
-title: "Preview Mode for Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/preview/cover.jpg"
+title: "CORS는 왜 이렇게 우리를 힘들게 하는걸까?"
+excerpt: "이번 포스팅에서는 웹 개발자라면 한번쯤은 얻어맞아 봤을 법한 CORS(Cross-Origin Resource Sharing) 정책에 대한 이야기를 해보려고 한다. 사실 웹 개발을 하다보면 CORS 정책 위반으로 인해 에러가 발생하는 상황은 굉장히 흔해서 누구나 한 번 정도는 겪게 된다고 해도 과언이 아니다."
 date: "2020-03-16T05:35:07.322Z"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
