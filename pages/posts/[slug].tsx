@@ -32,13 +32,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
               <Head>
                 <title>{post.title} | Next.js Blog Example with</title>
                 <meta property="og:image" content={post.ogImage.url} />
-                <link
-                  rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css"
-                />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
-
-                <script>hljs.initHighlightingOnLoad();</script>
               </Head>
               <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
