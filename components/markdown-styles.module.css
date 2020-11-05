@@ -16,3 +16,11 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown p code {
+  @apply text-red-500 bg-gray-100 mx-1;
+}
+
+.markdown blockquote p {
+  @apply p-8 text-left border-solid border-l-4 border-teal-600 bg-gray-200;
+}
