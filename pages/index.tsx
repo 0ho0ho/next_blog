@@ -22,12 +22,12 @@ const Index = ({ allPosts }: Props) => {
           ></script>
           <script
             dangerouslySetInnerHTML={{
-              __html: `var feed = new Instafeed({
-    accessToken:
-      "IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR",
-  })
-  feed.run()
-  `,
+              __html: `
+                var feed = new Instafeed({
+                  accessToken: "IGQVJYQzVvSHdKV2hrVUl2eE5zVThuNDVhcDJUY0k0TXJZAODNlVUpYdnBqOUtiU0w2dmpjbE5FNHhpbFNKRE1sTFItV2loVWlra1UyTkJJcTdFRzZA1eGxrWktqSE93TjRiTXVJWG8zYW41REtKVW1BbwZDZD"
+                });
+                feed.run();
+                `,
             }}
           />
         </Head>
