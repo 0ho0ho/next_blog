@@ -14,6 +14,8 @@ const Index = ({ allPosts }: Props) => {
   return (
     <>
       <Layout>
+        <div id="instafeed"></div>
+
         <Head>
           <title>blog</title>
           <script
@@ -24,14 +26,14 @@ const Index = ({ allPosts }: Props) => {
             dangerouslySetInnerHTML={{
               __html: `
                 var feed = new Instafeed({
-                  accessToken: "IGQVJYQzVvSHdKV2hrVUl2eE5zVThuNDVhcDJUY0k0TXJZAODNlVUpYdnBqOUtiU0w2dmpjbE5FNHhpbFNKRE1sTFItV2loVWlra1UyTkJJcTdFRzZA1eGxrWktqSE93TjRiTXVJWG8zYW41REtKVW1BbwZDZD"
+                  accessToken: "IGQVJXTW5OSk4xQkxIeGsxNU1FR1p3WHNMcDJNaXVCTldUUnFKc0d3aDFNUWhCNzMtSUtkLXZAtTDhidWQyV0VqcUJTUjdXRktsV3JwX2VQWmlIZADMybHJDWUhaaHI2dmY5bHd5N2xtZAXBPMDBNckJpdQZDZD",
+                  debug: true
                 });
                 feed.run();
                 `,
             }}
           />
         </Head>
-        <div id="instafeed"></div>
         <Container>
           <MoreStories posts={posts} />
         </Container>
@@ -49,3 +51,9 @@ export const getStaticProps = async () => {
     props: { allPosts },
   };
 };
+
+// curl -X GET 'https://graph.instagram.com/me?fields=id,username&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
+
+// curl -X GET 'https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
+
+// curl -X GET 'https://graph.instagram.com/17841401585390558?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
