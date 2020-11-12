@@ -3246,6 +3246,11 @@ inherits@2.0.3:
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
+instafeed@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/instafeed/-/instafeed-1.4.0.tgz#1f7b248283d8ffbee59b82f2f45c29220b90cae1"
+  integrity sha512-+2Xubm+mPdvIpQMn+hxdryBT6lUtwUXodFPeWeHkqiY9qmNyctjMKgD95s075nGowtiKULmM99LcA4xIm0SV+Q==
+
 invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
