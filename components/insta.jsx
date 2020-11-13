@@ -5,7 +5,7 @@ const Insta = () => {
   
   useEffect(() => {
     const feed = new Instafeed({
-      accessToken: "IGQVJYRWJ5eTNtMi15cWhOY0dLUWZAaOHNhbUd4RGxkdUpDZA0hjazYwR2ptYU41aExxb3UydGxSVkVfX0RQUjh3bk44V2UwdkVpQ29zNzdOVFFkT2I1T05hRE4xdm5QdTFJaURTRmdn",
+      accessToken: "IGQVJXS0lsZAU1xUDhLTmg4SkpPTC0yVi1haXRma1FnMFB6Ni02aGRFTFFOTzBnMzJqOU1ycElmZA2IxVEF5QWFuNFljN01PM3Y4S3NzejNTWHVsQ29NeGFReUliaExfZAmI5V2ZAGSGZAB",
       template: '<a href="{{link}}"><img style="width: 100px; height: 100px; display: inline-block;" src={{image}} /></a>'
     });
     feed.run();
