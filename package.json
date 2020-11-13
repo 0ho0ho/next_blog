@@ -8,11 +8,13 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@types/prismjs": "^1.16.2",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "dotenv": "^8.2.0",
     "gray-matter": "4.0.2",
     "next": "latest",
+    "prismjs": "^1.22.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "remark": "11.0.2",

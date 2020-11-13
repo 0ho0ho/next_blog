@@ -14,7 +14,7 @@ ogImage:
 
 asdgasg `single line code` asdfasdfaasdfasdfas**asdfasdf**sdfasdf~~qfqwef~~
 
-```typescript
+```javascript
 const javascript = true;
 function abc(age: number, name: string) {
   return `${age} + ${name}`;
