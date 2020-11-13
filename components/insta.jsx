@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig();
 
 const Insta = () => {
-  
   useEffect(() => {
     const feed = new Instafeed({
-      accessToken: "IGQVJXS0lsZAU1xUDhLTmg4SkpPTC0yVi1haXRma1FnMFB6Ni02aGRFTFFOTzBnMzJqOU1ycElmZA2IxVEF5QWFuNFljN01PM3Y4S3NzejNTWHVsQ29NeGFReUliaExfZAmI5V2ZAGSGZAB",
+      accessToken: publicRuntimeConfig.ACCESS_TOKEN,
       template: '<a href="{{link}}"><img style="width: 100px; height: 100px; display: inline-block;" src={{image}} /></a>'
     });
     feed.run();
