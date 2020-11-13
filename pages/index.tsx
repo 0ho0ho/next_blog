@@ -23,7 +23,7 @@ const Index = ({ allPosts }: Props) => {
               __html: `
               var feed = new Instafeed({
                 accessToken: "IGQVJYRWJ5eTNtMi15cWhOY0dLUWZAaOHNhbUd4RGxkdUpDZA0hjazYwR2ptYU41aExxb3UydGxSVkVfX0RQUjh3bk44V2UwdkVpQ29zNzdOVFFkT2I1T05hRE4xdm5QdTFJaURTRmdn",
-                template: '<img style="width: 100px; height: 100px; display: inline-block;" src={{image}} />'
+                template: '<a href="{{link}}"><img style="width: 100px; height: 100px; display: inline-block;" src={{image}} /></a>'
               });
               feed.run();
               `,
