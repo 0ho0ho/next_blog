@@ -14,6 +14,10 @@ ogImage:
 
 asdgasg `single line code` asdfasdfaasdfasdfas**asdfasdf**sdfasdf~~qfqwef~~
 
+[Google](https://google.co.kr)
+
+![Alt text](/assets/blog/dynamic-routing/cover.jpg)
+
 ```typescript
 const javascript = true;
 function abc(age: number, name: string) {

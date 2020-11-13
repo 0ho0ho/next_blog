@@ -18,9 +18,13 @@
 }
 
 .markdown p code {
-  @apply text-teal-600 bg-gray-100 mx-1;
+  @apply text-red-600 bg-gray-100 mx-1;
 }
 
 .markdown blockquote p {
   @apply p-8 text-left border-solid border-l-4 border-teal-600 bg-gray-200;
+}
+
+.markdown p a {
+  @apply text-teal-600 underline;
 }
