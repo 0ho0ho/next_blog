@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import markdownStyles from "./markdown-styles.module.css";
-import Head from "next/head";
 
 type Props = {
   content: string;
@@ -20,14 +19,6 @@ const PostBody = ({ content }: Props) => {
 
   return (
     <>
-      <Head>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-        <link
-          rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css"
-        />
-        <script>hljs.initHighlightingOnLoad();</script>
-      </Head>
       <div className="max-w-2xl mx-auto">
         <div
           className={markdownStyles["markdown"]}
