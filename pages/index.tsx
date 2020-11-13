@@ -19,14 +19,10 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>blog</title>
           <script
-            type="text/javascript"
-            src="https://cdn.boomcdn.com/libs/instafeed-js/1.4.1/instafeed.min.js"
-          ></script>
-          <script
             dangerouslySetInnerHTML={{
               __html: `
                 var feed = new Instafeed({
-                  accessToken: "IGQVJXTW5OSk4xQkxIeGsxNU1FR1p3WHNMcDJNaXVCTldUUnFKc0d3aDFNUWhCNzMtSUtkLXZAtTDhidWQyV0VqcUJTUjdXRktsV3JwX2VQWmlIZADMybHJDWUhaaHI2dmY5bHd5N2xtZAXBPMDBNckJpdQZDZD",
+                  accessToken: "IGQVJYRWJ5eTNtMi15cWhOY0dLUWZAaOHNhbUd4RGxkdUpDZA0hjazYwR2ptYU41aExxb3UydGxSVkVfX0RQUjh3bk44V2UwdkVpQ29zNzdOVFFkT2I1T05hRE4xdm5QdTFJaURTRmdn",
                   debug: true
                 });
                 feed.run();
@@ -51,9 +47,3 @@ export const getStaticProps = async () => {
     props: { allPosts },
   };
 };
-
-// curl -X GET 'https://graph.instagram.com/me?fields=id,username&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
-
-// curl -X GET 'https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
-
-// curl -X GET 'https://graph.instagram.com/17841401585390558?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJXTXkxcm96SjFXRGw4dXlKOHNtUmR6SE5lQ3M0d1A0dW9BRDdJTVN2eTliTFRhQUxfT2Q1a2EwZATJ6bEwwRHVRZAzVjTmswRFNPTVUwLWI0Xy02M3dDdnliTXZAodnczclZAsNTJR'
