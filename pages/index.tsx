@@ -5,6 +5,7 @@ import Insta from "../components/insta";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
+
 type Props = {
   allPosts: Post[];
 };
@@ -17,7 +18,6 @@ const Index = ({ allPosts }: Props) => {
       <Layout>
         <Head>
           <title>blog</title>
-          <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
         </Head>
         <Container>
           <Insta />
