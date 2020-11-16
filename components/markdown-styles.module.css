@@ -28,3 +28,7 @@
 .markdown p a {
   @apply text-teal-600 underline;
 }
+
+.markdown p {
+  @apply break-words;
+}
