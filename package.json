@@ -2,7 +2,7 @@
   "name": "blog-starter-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3050",
     "deploy": "next build && next export --outdir docs && touch docs/.nojekyll && git add . && git commit -m 'deploy' && git push",
     "start": "next start",
     "typecheck": "tsc"

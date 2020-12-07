@@ -32,3 +32,11 @@
 .markdown p {
   @apply break-words;
 }
+
+.markdown ul {
+  @apply list-disc pl-8;
+}
+
+.markdown ol {
+  @apply list-decimal pl-8;
+}
