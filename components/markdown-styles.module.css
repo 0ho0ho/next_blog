@@ -18,7 +18,7 @@
 }
 
 .markdown p code {
-  @apply text-red-600 bg-gray-100 mx-1;
+  @apply text-red-600 bg-red-100 mx-1;
 }
 
 .markdown blockquote p {

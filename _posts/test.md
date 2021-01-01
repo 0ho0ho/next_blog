@@ -1,8 +1,6 @@
 ---
-title: "정규식은 어떻게 사용되는 것일까?"
-excerpt: "필자는 지난 불규칙 속에서 규칙을 찾아내는 정규표현식 포스팅에서 정규식의 기본적인 사용 방법을 한 차례 설명한 바 있다.
-
-그러나 아무리 정규식의 기본적인 사용 방법을 알고 있다고 해도 실제로 정규식을 사용해야하는 상황이 되면 눈 앞이 깜깜해지기 마련이다."
+title: "Interface vs Type Aliases"
+excerpt: "typescript 사용시 Interface와 Type Aliases 중 어느걸 사용해야하는가?"
 date: "2020-03-16T05:35:07.322Z"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
