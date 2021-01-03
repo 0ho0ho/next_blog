@@ -40,3 +40,7 @@
 .markdown ol {
   @apply list-decimal pl-8;
 }
+
+.markdown p {
+  @apply tracking-wide font-thin;
+}
