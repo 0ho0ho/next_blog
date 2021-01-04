@@ -42,5 +42,5 @@
 }
 
 .markdown p {
-  @apply tracking-wide font-thin;
+  @apply tracking-wide font-light;
 }
