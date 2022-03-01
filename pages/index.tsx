@@ -16,7 +16,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>blog</title>
+          <title>0HO</title>
         </Head>
         <Container>
           <MoreStories posts={posts} />
