@@ -21,6 +21,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout preview={preview}>
       <Container>
@@ -32,6 +33,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
               <Head>
                 <title>{post.title}</title>
                 <meta property="og:image" content={post.ogImage.url} />
+                <meta property="description" content={post.excerpt} />
               </Head>
               <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
@@ -58,6 +60,7 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "content",
     "ogImage",
+    "excerpt",
   ]);
   const content = await markdownToHtml(post.content || "");
 
