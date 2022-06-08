@@ -33,6 +33,10 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`0Ho's Blog`} />
       <meta property="og:image" content="/assets/cover.png" />
+      <meta
+        name="google-site-verification"
+        content="534XJKqxYeaV4SnmLT7bD8BFygYBD2jEsMZFukhcGNw"
+      />
     </Head>
   );
 };
