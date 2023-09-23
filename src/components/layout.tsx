@@ -1,13 +1,13 @@
 import Footer from './footer';
-import Meta from './meta';
 import Header from './header';
+import Meta from './meta';
 
-type Props = {
+type Properties = {
   preview?: boolean;
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = ({ preview, children }: Properties) => {
   return (
     <>
       <Meta />

@@ -1,16 +1,16 @@
+import Prism from 'prismjs';
 import { useEffect } from 'react';
 import markdownStyles from './markdown-styles.module.css';
-import Prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
-
 type Props = {
   content: string;
 };
-
+interface Test {}
 const PostBody = ({ content }: Props) => {
+  console.log(123);
   useEffect(() => {
-    let script = document.createElement('script');
+    const script = document.createElement('script');
     script.src = 'https://utteranc.es/client.js';
     script.setAttribute('repo', '0ho0ho/0ho0ho.github.io');
     script.setAttribute('issue-term', 'pathname');
@@ -33,7 +33,7 @@ const PostBody = ({ content }: Props) => {
           123
         </div>
       </div>
-      <div id="utterances"></div>
+      <div id="utterances" />
     </>
   );
 };
