@@ -1,12 +1,12 @@
-import Container from '../components/container';
-import MoreStories from '../components/more-stories';
-import Layout from '../components/layout';
-import { getAllPosts } from '../lib/api';
 import Head from 'next/head';
-import Post from '../types/post';
+import Container from '@components/container';
+import Layout from '@components/layout';
+import MoreStories from '@components/more-stories';
+import { getAllPosts } from '@lib/api';
+import type { PostType } from '@type/post';
 
 type Props = {
-  allPosts: Post[];
+  allPosts: PostType[];
 };
 
 const Index = ({ allPosts }: Props) => {
@@ -16,7 +16,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>0HO's Blog</title>
+          <title>0HO&apos;s Blog</title>
         </Head>
         <Container>
           <MoreStories posts={posts} />

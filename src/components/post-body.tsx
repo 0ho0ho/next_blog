@@ -3,12 +3,12 @@ import { useEffect } from 'react';
 import markdownStyles from './markdown-styles.module.css';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
+
 type Props = {
   content: string;
 };
-interface Test {}
+
 const PostBody = ({ content }: Props) => {
-  console.log(123);
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://utteranc.es/client.js';
@@ -29,9 +29,7 @@ const PostBody = ({ content }: Props) => {
   return (
     <>
       <div className="max-w-2xl mx-auto">
-        <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }}>
-          123
-        </div>
+        <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }} />
       </div>
       <div id="utterances" />
     </>

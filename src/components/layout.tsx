@@ -7,7 +7,7 @@ type Properties = {
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Properties) => {
+const Layout = ({ children }: Properties) => {
   return (
     <>
       <Meta />

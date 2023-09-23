@@ -1,8 +1,8 @@
 import PostPreview from './post-preview';
-import Post from '../types/post';
+import type { PostType } from '@type/post';
 
 type Props = {
-  posts: Post[];
+  posts: PostType[];
 };
 
 const MoreStories = ({ posts }: Props) => {
