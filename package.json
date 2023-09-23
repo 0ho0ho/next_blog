@@ -8,7 +8,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@types/prismjs": "^1.16.2",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "dotenv": "^8.2.0",
@@ -18,10 +17,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0",
-    "typescript": "^3.9.2"
+    "remark-html": "10.0.0"
   },
   "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/prismjs": "^1.16.2",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
