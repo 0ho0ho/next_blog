@@ -15,7 +15,8 @@
       "error",
       {
         "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
-        "alphabetize": { "order": "asc" }
+        "alphabetize": { "order": "asc" },
+        "newlines-between": "always"
       }
     ],
     "no-restricted-imports": [
@@ -24,6 +25,13 @@
         "patterns": ["../"]
       }
     ],
-    "object-shorthand": "warn"
+    "object-shorthand": "error",
+    "prefer-arrow-callback": "error",
+    "implicit-arrow-linebreak": "error",
+    "no-async-promise-executor": "error",
+    "prefer-template": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    "radix": "error"
   }
 }
