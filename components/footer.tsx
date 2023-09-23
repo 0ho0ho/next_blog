@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="text-lg text-teal-600 text-center py-12">
+    <footer className="py-12 text-lg text-center text-teal-600">
       {/* <a href="https://github.com/0ho0ho" target="_blank">
         github
       </a> */}

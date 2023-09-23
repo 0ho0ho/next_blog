@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import markdownStyles from "./markdown-styles.module.css";
-import Prism from "prismjs";
-import "prismjs/components/prism-javascript";
-import "prismjs/components/prism-typescript";
+import { useEffect } from 'react';
+import markdownStyles from './markdown-styles.module.css';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
 
 type Props = {
   content: string;
@@ -10,18 +10,18 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   useEffect(() => {
-    let script = document.createElement("script");
-    script.src = "https://utteranc.es/client.js";
-    script.setAttribute("repo", "0ho0ho/0ho0ho.github.io");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("crossorigin", "anonymous");
+    let script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', '0ho0ho/0ho0ho.github.io');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
 
-    document.getElementById("utterances")?.appendChild(script);
+    document.getElementById('utterances')?.appendChild(script);
   });
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       Prism.highlightAll();
     }
   }, []);
@@ -29,10 +29,9 @@ const PostBody = ({ content }: Props) => {
   return (
     <>
       <div className="max-w-2xl mx-auto">
-        <div
-          className={markdownStyles["markdown"]}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }}>
+          123
+        </div>
       </div>
       <div id="utterances"></div>
     </>
