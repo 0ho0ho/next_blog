@@ -6,9 +6,7 @@ interface IHeaderProps {}
 const Header: React.FunctionComponent<IHeaderProps> = () => {
   return (
     <div className="py-10 text-3xl text-center">
-      <Link href="/">
-        <a>HO</a>
-      </Link>
+      <Link href="/">HO</Link>
     </div>
   );
 };
