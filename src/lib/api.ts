@@ -3,25 +3,23 @@ import { join } from 'path';
 
 import matter from 'gray-matter';
 
+import type { Post } from '@type/post';
+
 const postsDirectory = join(process.cwd(), 'src', '_posts');
 
-export function getPostSlugs() {
+function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+type Fields = 'title' | 'excerpt' | 'date' | 'ogImage' | 'slug' | 'content';
+export function getPostBySlug(slug: string, fields: Fields[] = []) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key: string]: string;
-  };
+  const items: Partial<Post> = {};
 
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
     if (field === 'slug') {
       items[field] = realSlug;
@@ -35,14 +33,18 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
   });
 
-  return items;
+  return items as Post;
 }
 
-export function getAllPosts(fields: string[] = []) {
+export function getAllPosts(fields: Fields[] = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map(slug => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort((post1, post2) => {
+      if (!post1.date || !post2.date) {
+        return -1;
+      }
+      return post1.date > post2.date ? -1 : 1;
+    });
   return posts;
 }
