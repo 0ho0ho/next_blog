@@ -1,4 +1,3 @@
-import Container from '@components/container';
 import MoreStories from '@components/more-stories';
 import { getAllPosts } from '@lib/api';
 
@@ -12,9 +11,5 @@ export const metadata: Metadata = {
 export default function Page() {
   const posts = getAllPosts(['title', 'date', 'slug', 'excerpt']);
 
-  return (
-    <Container>
-      <MoreStories posts={posts} />
-    </Container>
-  );
+  return <MoreStories posts={posts} />;
 }

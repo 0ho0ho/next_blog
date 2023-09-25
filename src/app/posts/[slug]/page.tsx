@@ -1,4 +1,3 @@
-import Container from '@components/container';
 import PostBody from '@components/post-body';
 import PostHeader from '@components/post-header';
 import { getPostBySlug } from '@lib/api';
@@ -15,12 +14,10 @@ const Page = async ({ params }: Props) => {
   const content = await markdownToHtml(post.content);
 
   return (
-    <Container>
-      <article className="mb-32">
-        <PostHeader title={post.title} date={post.date} />
-        <PostBody content={content} />
-      </article>
-    </Container>
+    <article className="mb-32">
+      <PostHeader title={post.title} date={post.date} />
+      <PostBody content={content} />
+    </article>
   );
 };
 

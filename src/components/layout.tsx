@@ -10,7 +10,7 @@ const Layout = ({ children }: Properties) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="px-5">{children}</main>
       <Footer />
     </>
   );
