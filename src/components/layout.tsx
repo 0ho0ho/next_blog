@@ -1,12 +1,11 @@
 import Footer from './footer';
 import Header from './header';
 
-type Properties = {
-  preview?: boolean;
+interface Props {
   children: React.ReactNode;
-};
+}
 
-const Layout = ({ children }: Properties) => {
+const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />

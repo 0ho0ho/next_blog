@@ -7,9 +7,9 @@ import markdownStyles from './markdown-styles.module.css';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
 
-type Props = {
+interface Props {
   content: string;
-};
+}
 
 const PostBody = ({ content }: Props) => {
   useEffect(() => {

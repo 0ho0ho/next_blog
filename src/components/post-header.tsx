@@ -1,10 +1,10 @@
 import DateFormatter from './date-formatter';
 import PostTitle from './post-title';
 
-type Props = {
+interface Props {
   title: string;
   date: string;
-};
+}
 
 const PostHeader = ({ title, date }: Props) => {
   return (

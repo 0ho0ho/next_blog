@@ -1,10 +1,10 @@
 import { parseISO, format } from 'date-fns';
 
-type Properties = {
+interface Props {
   dateString: string;
-};
+}
 
-const DateFormatter = ({ dateString }: Properties) => {
+const DateFormatter = ({ dateString }: Props) => {
   const date = parseISO(dateString);
   return (
     <time className="font-hairline" dateTime={dateString}>

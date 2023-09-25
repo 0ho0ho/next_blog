@@ -2,9 +2,9 @@ import PostPreview from './post-preview';
 
 import type { Post } from '@type/post';
 
-type Props = {
+interface Props {
   posts: Post[];
-};
+}
 
 const MoreStories = ({ posts }: Props) => {
   return (

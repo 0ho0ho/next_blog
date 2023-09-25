@@ -1,12 +1,13 @@
 import Link from 'next/link';
+
 import DateFormatter from './date-formatter';
 
-type Props = {
+interface Props {
   title: string;
   date: string;
   excerpt: string;
   slug: string;
-};
+}
 
 const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   return (
