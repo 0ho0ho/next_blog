@@ -1,5 +1,5 @@
 import Date from '@components/Date';
-import PostBody from '@components/PostBody';
+import Content from '@components/post/Content';
 import { getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 
@@ -17,7 +17,7 @@ const Page = async ({ params }: Props) => {
     <article className="mb-32">
       <h1 className="text-3xl font-extrabold">{post.title}</h1>
       <Date dateString={post.date} />
-      <PostBody content={content} />
+      <Content content={content} />
     </article>
   );
 };

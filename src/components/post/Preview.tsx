@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Date from './Date';
+import Date from '@components/Date';
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
   slug: string;
 }
 
-const PostPreview = ({ title, date, excerpt, slug }: Props) => {
+const Preview = ({ title, date, excerpt, slug }: Props) => {
   return (
     <Link href={`/posts/${slug}`} className="flex flex-col gap-2 p-4 border border-gray-400 rounded-md">
       <h2 className="text-xl font-semibold text-teal-600">{title}</h2>
@@ -21,4 +21,4 @@ const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   );
 };
 
-export default PostPreview;
+export default Preview;

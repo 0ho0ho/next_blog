@@ -1,4 +1,4 @@
-import MoreStories from '@components/MoreStories';
+import Preview from '@components/post/Preview';
 import { getAllPosts } from '@lib/api';
 
 import type { Metadata } from 'next';
@@ -8,8 +8,18 @@ export const metadata: Metadata = {
   description: 'Welcome to Next.js',
 };
 
-export default function Page() {
+const Page = () => {
   const posts = getAllPosts(['title', 'date', 'slug', 'excerpt']);
 
-  return <MoreStories posts={posts} />;
-}
+  return (
+    <ul className="flex flex-col gap-2">
+      {posts.map(post => (
+        <li key={post.slug}>
+          <Preview title={post.title} date={post.date} slug={post.slug} excerpt={post.excerpt} />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default Page;

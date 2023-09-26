@@ -10,7 +10,7 @@ interface Props {
   content: string;
 }
 
-const PostBody = ({ content }: Props) => {
+const Content = ({ content }: Props) => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -18,4 +18,4 @@ const PostBody = ({ content }: Props) => {
   return <div dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
-export default PostBody;
+export default Content;

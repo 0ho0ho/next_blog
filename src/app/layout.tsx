@@ -1,7 +1,7 @@
 import Layout from '@components/layout';
 
 import type { Metadata } from 'next';
-
+import type { PropsWithChildren } from 'react';
 import '@styles/index.css';
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Welcome to Next.js',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en">
       <body>
@@ -17,4 +17,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
