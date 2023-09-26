@@ -8,13 +8,13 @@ interface Props {
 
 const MoreStories = ({ posts }: Props) => {
   return (
-    <section>
-      <div className="grid grid-cols-1 mb-32 md:grid-cols-1 lg:row-gap-5">
-        {posts.map(post => (
-          <PostPreview key={post.slug} title={post.title} date={post.date} slug={post.slug} excerpt={post.excerpt} />
-        ))}
-      </div>
-    </section>
+    <ul className="flex flex-col gap-2">
+      {posts.map(post => (
+        <li key={post.slug}>
+          <PostPreview title={post.title} date={post.date} slug={post.slug} excerpt={post.excerpt} />
+        </li>
+      ))}
+    </ul>
   );
 };
 
