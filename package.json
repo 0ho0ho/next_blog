@@ -4,13 +4,10 @@
   "scripts": {
     "dev": "next -p 3050",
     "deploy": "next build && next export --outdir docs && touch docs/.nojekyll && git add . && git commit -m 'deploy' && git push",
-    "start": "next start",
-    "typecheck": "tsc"
+    "start": "next start"
   },
   "dependencies": {
-    "classnames": "2.2.6",
     "date-fns": "2.10.0",
-    "dotenv": "^8.2.0",
     "gray-matter": "4.0.2",
     "next": "^13.5.2",
     "prismjs": "^1.22.0",
@@ -21,7 +18,6 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
-    "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
     "@types/prismjs": "^1.16.2",
     "@types/react": "^18.2.22",
