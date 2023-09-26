@@ -1,4 +1,4 @@
-import MoreStories from '@components/more-stories';
+import MoreStories from '@components/MoreStories';
 import { getAllPosts } from '@lib/api';
 
 import type { Metadata } from 'next';

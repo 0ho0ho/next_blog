@@ -1,4 +1,4 @@
-import PostPreview from './post-preview';
+import PostPreview from './PostPreview';
 
 import type { Post } from '@type/post';
 

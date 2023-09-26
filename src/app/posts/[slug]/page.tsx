@@ -1,5 +1,5 @@
 import Date from '@components/Date';
-import PostBody from '@components/post-body';
+import PostBody from '@components/PostBody';
 import { getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 
