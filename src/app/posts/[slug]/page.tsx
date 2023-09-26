@@ -15,7 +15,7 @@ const Page = async ({ params }: Props) => {
 
   return (
     <article className="mb-32">
-      <h1 className="text-3xl font-bold">{post.title}</h1>
+      <h1 className="text-3xl font-extrabold">{post.title}</h1>
       <DateFormatter dateString={post.date} />
       <PostBody content={content} />
     </article>

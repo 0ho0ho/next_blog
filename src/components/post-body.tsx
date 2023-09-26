@@ -2,10 +2,9 @@
 
 import Prism from 'prismjs';
 import { useEffect } from 'react';
-
-import markdownStyles from './markdown-styles.module.css';
-import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-tsx';
 
 interface Props {
   content: string;
@@ -13,16 +12,10 @@ interface Props {
 
 const PostBody = ({ content }: Props) => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      Prism.highlightAll();
-    }
+    Prism.highlightAll();
   }, []);
 
-  return (
-    <div className="max-w-2xl mx-auto">
-      <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }} />
-    </div>
-  );
+  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
 export default PostBody;
