@@ -8,9 +8,7 @@ interface Props {
 const PostHeader = ({ title, date }: Props) => {
   return (
     <>
-      <h1 className="max-w-2xl mx-auto mb-3 text-4xl font-bold leading-tight tracking-tighter lg:text-3xl md:leading-none">
-        {title}
-      </h1>
+      <h1 className="text-3xl font-bold">{title}</h1>
       <DateFormatter dateString={date} />
     </>
   );
