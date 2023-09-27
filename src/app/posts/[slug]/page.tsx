@@ -14,7 +14,7 @@ const Page = async ({ params }: Props) => {
   const content = await markdownToHtml(post.content);
 
   return (
-    <article className="mb-32">
+    <article>
       <h1 className="text-3xl font-extrabold">{post.title}</h1>
       <Date dateString={post.date} />
       <Content content={content} />
