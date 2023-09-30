@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
+  content: ['src/**'],
   theme: {
     extend: {
       colors: {
@@ -30,4 +31,4 @@ module.exports = {
       },
     },
   },
-}
+};
