@@ -8,7 +8,7 @@ const Date = ({ dateString }: Props) => {
   const date = parseISO(dateString);
 
   return (
-    <time className="font-hairline" dateTime={dateString}>
+    <time className="text-gray-400" dateTime={dateString}>
       {format(date, 'yyyy LLLL d')}
     </time>
   );
