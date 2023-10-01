@@ -1,5 +1,5 @@
-import DateFormatter from '@components/DateFormatter';
 import Content from '@components/post/Content';
+import DateFormatter from '@components/shared/DateFormatter';
 import { getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 

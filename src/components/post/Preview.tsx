@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import DateFormatter from '@components/DateFormatter';
+import DateFormatter from '@components/shared/DateFormatter';
 
 interface Props {
   title: string;
