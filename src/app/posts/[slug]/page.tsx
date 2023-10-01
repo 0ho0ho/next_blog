@@ -1,4 +1,4 @@
-import Date from '@components/Date';
+import DateFormatter from '@components/DateFormatter';
 import Content from '@components/post/Content';
 import { getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
@@ -16,7 +16,7 @@ const Page = async ({ params }: Props) => {
   return (
     <article>
       <h1 className="text-3xl font-extrabold">{post.title}</h1>
-      <Date dateString={post.date} />
+      <DateFormatter dateString={post.date} />
       <Content content={content} />
     </article>
   );

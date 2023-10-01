@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Date from '@components/Date';
+import DateFormatter from '@components/DateFormatter';
 
 interface Props {
   title: string;
@@ -18,7 +18,7 @@ const Preview = ({ title, date, excerpt, slug }: Props) => {
       <h2 className="text-xl font-semibold text-teal-600">{title}</h2>
       <p className="text-gray-700">{excerpt}</p>
       <div className="text-gray-700">
-        <Date dateString={date} />
+        <DateFormatter dateString={date} />
       </div>
     </Link>
   );

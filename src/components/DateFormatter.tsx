@@ -4,7 +4,7 @@ interface Props {
   dateString: string;
 }
 
-const Date = ({ dateString }: Props) => {
+const DateFormatter = ({ dateString }: Props) => {
   const date = parseISO(dateString);
 
   return (
@@ -14,4 +14,4 @@ const Date = ({ dateString }: Props) => {
   );
 };
 
-export default Date;
+export default DateFormatter;
