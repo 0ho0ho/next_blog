@@ -15,7 +15,7 @@ const Content = ({ content }: Props) => {
     Prism.highlightAll();
   }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  return <div className="mt-5 prose" dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
 export default Content;
