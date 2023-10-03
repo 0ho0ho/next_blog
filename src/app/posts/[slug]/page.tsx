@@ -1,6 +1,6 @@
 import Content from '@components/post/Content';
 import DateFormatter from '@components/shared/DateFormatter';
-import { getPostBySlug } from '@lib/api';
+import { getAllPosts, getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 
 import type { Metadata } from 'next';
@@ -9,6 +9,12 @@ interface Props {
   params: {
     slug: string;
   };
+}
+
+export async function generateStaticParams() {
+  const posts = getAllPosts(['slug']);
+
+  return posts.map(({ slug }) => ({ slug }));
 }
 
 const Page = async ({ params }: Props) => {
