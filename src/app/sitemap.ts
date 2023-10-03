@@ -5,8 +5,8 @@ import type { MetadataRoute } from 'next';
 const BASE_URL = process.env.BASE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['/'].map(route => ({
-    url: `${URL}${route}`,
+  const routes = [''].map(route => ({
+    url: `${BASE_URL}${route}`,
     lastModified: new Date().toISOString(),
   }));
 
