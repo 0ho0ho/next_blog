@@ -4,31 +4,34 @@
   "scripts": {
     "dev": "next -p 3050",
     "deploy": "next build && next export --outdir docs && touch docs/.nojekyll && git add . && git commit -m 'deploy' && git push",
-    "start": "next start",
-    "typecheck": "tsc"
+    "start": "next start"
   },
   "dependencies": {
-    "@types/prismjs": "^1.16.2",
-    "classnames": "2.2.6",
     "date-fns": "2.10.0",
-    "dotenv": "^8.2.0",
     "gray-matter": "4.0.2",
-    "next": "latest",
+    "next": "^13.5.2",
     "prismjs": "^1.22.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0",
-    "typescript": "^3.9.2"
+    "remark-html": "10.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/classnames": "^2.2.10",
-    "@types/jest": "^25.2.2",
+    "@types/gtag.js": "^0.0.14",
     "@types/node": "^14.0.1",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
+    "@types/prismjs": "^1.16.2",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^13.5.2",
+    "eslint-config-prettier": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.0"
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
   },
   "license": "MIT"
 }

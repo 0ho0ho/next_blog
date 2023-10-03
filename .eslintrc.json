@@ -1,0 +1,37 @@
+{
+  "extends": ["plugin:@typescript-eslint/recommended", "next/core-web-vitals", "prettier"],
+  "rules": {
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-console": "warn",
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+        "alphabetize": { "order": "asc" },
+        "newlines-between": "always"
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["../"]
+      }
+    ],
+    "object-shorthand": "error",
+    "prefer-arrow-callback": "error",
+    "implicit-arrow-linebreak": "error",
+    "no-async-promise-executor": "error",
+    "prefer-template": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    "radix": "error"
+  }
+}
