@@ -3,6 +3,8 @@ import DateFormatter from '@components/shared/DateFormatter';
 import { getPostBySlug } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 
+import type { Metadata } from 'next';
+
 interface Props {
   params: {
     slug: string;
@@ -21,5 +23,23 @@ const Page = async ({ params }: Props) => {
     </article>
   );
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { title, slug, excerpt } = getPostBySlug(params.slug, ['title', 'slug', 'ogImage', 'excerpt']);
+
+  return {
+    title,
+    description: excerpt,
+    openGraph: {
+      url: `/posts/${slug}`,
+      title,
+      description: excerpt,
+    },
+    twitter: {
+      title,
+      description: excerpt,
+    },
+  };
+}
 
 export default Page;
