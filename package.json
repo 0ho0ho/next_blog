@@ -4,8 +4,7 @@
   "scripts": {
     "dev": "next -p 3050",
     "build": "next build",
-    "deploy": "next build && next export --outdir docs && touch docs/.nojekyll && git add . && git commit -m 'deploy' && git push",
-    "start": "next start"
+    "deploy": "next build && touch docs/.nojekyll && git add . && git commit -m 'deploy' && git push"
   },
   "dependencies": {
     "date-fns": "2.10.0",
