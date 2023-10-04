@@ -5,8 +5,39 @@ import * as gtag from '@lib/gtag';
 
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
-
 import '@styles/index.css';
+
+const RootLayout = ({ children }: PropsWithChildren) => {
+  return (
+    <html lang="ko">
+      <body>
+        <Layout>{children}</Layout>
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+            />
+            <Script
+              id="gtag-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gtag.GA_TRACKING_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+      </body>
+    </html>
+  );
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://oungo.github.io'),
@@ -38,38 +69,6 @@ export const metadata: Metadata = {
       url: '/og-image.svg',
     },
   },
-};
-
-const RootLayout = ({ children }: PropsWithChildren) => {
-  return (
-    <html lang="en">
-      <body>
-        <Layout>{children}</Layout>
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-            <Script
-              id="gtag-init"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gtag.GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
-      </body>
-    </html>
-  );
 };
 
 export default RootLayout;
