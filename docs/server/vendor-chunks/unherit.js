@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/unherit";
+exports.ids = ["vendor-chunks/unherit"];
+exports.modules = {
+
+/***/ "(rsc)/./node_modules/unherit/index.js":
+/*!***************************************!*\
+  !*** ./node_modules/unherit/index.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("\nvar xtend = __webpack_require__(/*! xtend */ \"(rsc)/./node_modules/xtend/immutable.js\");\nvar inherits = __webpack_require__(/*! inherits */ \"(rsc)/./node_modules/inherits/inherits.js\");\nmodule.exports = unherit;\n// Create a custom constructor which can be modified without affecting the\n// original class.\nfunction unherit(Super) {\n    var result;\n    var key;\n    var value;\n    inherits(Of, Super);\n    inherits(From, Of);\n    // Clone values.\n    result = Of.prototype;\n    for(key in result){\n        value = result[key];\n        if (value && typeof value === \"object\") {\n            result[key] = \"concat\" in value ? value.concat() : xtend(value);\n        }\n    }\n    return Of;\n    // Constructor accepting a single argument, which itself is an `arguments`\n    // object.\n    function From(parameters) {\n        return Super.apply(this, parameters);\n    }\n    // Constructor accepting variadic arguments.\n    function Of() {\n        if (!(this instanceof Of)) {\n            return new From(arguments);\n        }\n        return Super.apply(this, arguments);\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvdW5oZXJpdC9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUVBLElBQUlBLFFBQVFDLG1CQUFPQSxDQUFDO0FBQ3BCLElBQUlDLFdBQVdELG1CQUFPQSxDQUFDO0FBRXZCRSxPQUFPQyxPQUFPLEdBQUdDO0FBRWpCLDBFQUEwRTtBQUMxRSxrQkFBa0I7QUFDbEIsU0FBU0EsUUFBUUMsS0FBSztJQUNwQixJQUFJQztJQUNKLElBQUlDO0lBQ0osSUFBSUM7SUFFSlAsU0FBU1EsSUFBSUo7SUFDYkosU0FBU1MsTUFBTUQ7SUFFZixnQkFBZ0I7SUFDaEJILFNBQVNHLEdBQUdFLFNBQVM7SUFFckIsSUFBS0osT0FBT0QsT0FBUTtRQUNsQkUsUUFBUUYsTUFBTSxDQUFDQyxJQUFJO1FBRW5CLElBQUlDLFNBQVMsT0FBT0EsVUFBVSxVQUFVO1lBQ3RDRixNQUFNLENBQUNDLElBQUksR0FBRyxZQUFZQyxRQUFRQSxNQUFNSSxNQUFNLEtBQUtiLE1BQU1TO1FBQzNEO0lBQ0Y7SUFFQSxPQUFPQztJQUVQLDBFQUEwRTtJQUMxRSxVQUFVO0lBQ1YsU0FBU0MsS0FBS0csVUFBVTtRQUN0QixPQUFPUixNQUFNUyxLQUFLLENBQUMsSUFBSSxFQUFFRDtJQUMzQjtJQUVBLDRDQUE0QztJQUM1QyxTQUFTSjtRQUNQLElBQUksQ0FBRSxLQUFJLFlBQVlBLEVBQUMsR0FBSTtZQUN6QixPQUFPLElBQUlDLEtBQUtLO1FBQ2xCO1FBRUEsT0FBT1YsTUFBTVMsS0FBSyxDQUFDLElBQUksRUFBRUM7SUFDM0I7QUFDRiIsInNvdXJjZXMiOlsid2VicGFjazovL2Jsb2ctc3RhcnRlci10eXBlc2NyaXB0Ly4vbm9kZV9tb2R1bGVzL3VuaGVyaXQvaW5kZXguanM/MjM3NCJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxudmFyIHh0ZW5kID0gcmVxdWlyZSgneHRlbmQnKVxudmFyIGluaGVyaXRzID0gcmVxdWlyZSgnaW5oZXJpdHMnKVxuXG5tb2R1bGUuZXhwb3J0cyA9IHVuaGVyaXRcblxuLy8gQ3JlYXRlIGEgY3VzdG9tIGNvbnN0cnVjdG9yIHdoaWNoIGNhbiBiZSBtb2RpZmllZCB3aXRob3V0IGFmZmVjdGluZyB0aGVcbi8vIG9yaWdpbmFsIGNsYXNzLlxuZnVuY3Rpb24gdW5oZXJpdChTdXBlcikge1xuICB2YXIgcmVzdWx0XG4gIHZhciBrZXlcbiAgdmFyIHZhbHVlXG5cbiAgaW5oZXJpdHMoT2YsIFN1cGVyKVxuICBpbmhlcml0cyhGcm9tLCBPZilcblxuICAvLyBDbG9uZSB2YWx1ZXMuXG4gIHJlc3VsdCA9IE9mLnByb3RvdHlwZVxuXG4gIGZvciAoa2V5IGluIHJlc3VsdCkge1xuICAgIHZhbHVlID0gcmVzdWx0W2tleV1cblxuICAgIGlmICh2YWx1ZSAmJiB0eXBlb2YgdmFsdWUgPT09ICdvYmplY3QnKSB7XG4gICAgICByZXN1bHRba2V5XSA9ICdjb25jYXQnIGluIHZhbHVlID8gdmFsdWUuY29uY2F0KCkgOiB4dGVuZCh2YWx1ZSlcbiAgICB9XG4gIH1cblxuICByZXR1cm4gT2ZcblxuICAvLyBDb25zdHJ1Y3RvciBhY2NlcHRpbmcgYSBzaW5nbGUgYXJndW1lbnQsIHdoaWNoIGl0c2VsZiBpcyBhbiBgYXJndW1lbnRzYFxuICAvLyBvYmplY3QuXG4gIGZ1bmN0aW9uIEZyb20ocGFyYW1ldGVycykge1xuICAgIHJldHVybiBTdXBlci5hcHBseSh0aGlzLCBwYXJhbWV0ZXJzKVxuICB9XG5cbiAgLy8gQ29uc3RydWN0b3IgYWNjZXB0aW5nIHZhcmlhZGljIGFyZ3VtZW50cy5cbiAgZnVuY3Rpb24gT2YoKSB7XG4gICAgaWYgKCEodGhpcyBpbnN0YW5jZW9mIE9mKSkge1xuICAgICAgcmV0dXJuIG5ldyBGcm9tKGFyZ3VtZW50cylcbiAgICB9XG5cbiAgICByZXR1cm4gU3VwZXIuYXBwbHkodGhpcywgYXJndW1lbnRzKVxuICB9XG59XG4iXSwibmFtZXMiOlsieHRlbmQiLCJyZXF1aXJlIiwiaW5oZXJpdHMiLCJtb2R1bGUiLCJleHBvcnRzIiwidW5oZXJpdCIsIlN1cGVyIiwicmVzdWx0Iiwia2V5IiwidmFsdWUiLCJPZiIsIkZyb20iLCJwcm90b3R5cGUiLCJjb25jYXQiLCJwYXJhbWV0ZXJzIiwiYXBwbHkiLCJhcmd1bWVudHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/unherit/index.js\n");
+
+/***/ })
+
+};
+;
