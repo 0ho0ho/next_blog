@@ -12,6 +12,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="ko">
       <body>
         <Layout>{children}</Layout>
+        <Script src="https://kit.fontawesome.com/110e54d917.js" crossOrigin="anonymous" key="fontawesome" />
         {process.env.NODE_ENV === 'production' && (
           <>
             <Script
