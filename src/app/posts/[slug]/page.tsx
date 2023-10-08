@@ -34,16 +34,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title, slug, excerpt } = getPostBySlug(params.slug, ['title', 'slug', 'ogImage', 'excerpt']);
 
   return {
+    metadataBase: new URL('https://oungo.github.io'),
     title,
     description: excerpt,
     openGraph: {
       url: `/posts/${slug}`,
       title,
       description: excerpt,
+      images: [
+        {
+          url: '/og-image.svg',
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
     twitter: {
       title,
       description: excerpt,
+      images: {
+        url: '/og-image.svg',
+      },
     },
   };
 }
