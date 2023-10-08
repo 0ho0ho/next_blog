@@ -35,9 +35,12 @@ const SideBar = ({ onClose }: Props) => {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 z-20 bg-black bg-opacity-30">
       <aside ref={asideRef} className="w-3/4 h-full p-5 bg-white sm:w-1/4 animate-slideRight">
-        <div className="text-center">
+        <div className="flex justify-center gap-4 text-2xl">
           <a href="https://github.com/oungo" target="_blank" rel="noopenner">
-            <i className="text-2xl fa-brands fa-github" />
+            <i className="fa-brands fa-github" />
+          </a>
+          <a href="mailto:y2k6273@naver.com">
+            <i className=" fa-regular fa-envelope" />
           </a>
         </div>
       </aside>
