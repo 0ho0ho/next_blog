@@ -42,6 +42,9 @@ const SideBar = ({ onClose }: Props) => {
           <a href="mailto:y2k6273@naver.com">
             <i className=" fa-regular fa-envelope" />
           </a>
+          <a href="https://www.linkedin.com/in/oungo" target="_blank" rel="noopenner">
+            <i className="fa-brands fa-linkedin" />
+          </a>
         </div>
       </aside>
     </div>
