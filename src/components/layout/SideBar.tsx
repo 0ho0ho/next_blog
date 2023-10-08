@@ -8,6 +8,13 @@ const SideBar = ({ onClose }: Props) => {
   const asideRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  useEffect(() => {
     if (!asideRef.current) {
       return;
     }
