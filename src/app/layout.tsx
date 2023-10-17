@@ -67,6 +67,9 @@ export const metadata: Metadata = {
       url: '/og-image.svg',
     },
   },
+  verification: {
+    google: '534XJKqxYeaV4SnmLT7bD8BFygYBD2jEsMZFukhcGNw',
+  },
 };
 
 export default RootLayout;
