@@ -2,7 +2,7 @@ import { getAllPosts } from '@lib/api';
 
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = 'https://oungo.github.io';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [''].map(route => ({
