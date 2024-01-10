@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     template: '%s - oungo',
     default: 'oungo',
   },
+  alternates: {
+    canonical: '/',
+  },
   description: '개발을 즐기는 프론트엔드 개발자입니다. 아무 글이나 끄적이고 있습니다.',
   openGraph: {
     url: '/',

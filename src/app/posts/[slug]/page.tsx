@@ -36,6 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     metadataBase: new URL('https://oungo.github.io'),
     title,
+    alternates: {
+      canonical: `/posts/${slug}`,
+    },
     description: excerpt,
     openGraph: {
       url: `/posts/${slug}`,
