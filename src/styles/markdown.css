@@ -103,8 +103,11 @@
 .markdown-body img {
   border-style: none;
   max-width: 100%;
-  box-sizing: content-box;
-  background-color: #ffffff;
+  box-sizing: border-box;
+  background: linear-gradient(#ff87c6, #ffdfff);
+  padding: 20px;
+  border-radius: 6px;
+  margin: 10px 0;
 }
 
 .markdown-body code,
@@ -312,6 +315,7 @@
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .markdown-body blockquote {
@@ -757,7 +761,7 @@
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
-  background-color: transparent;
+  background-color: #f6f8fa;
   border: 0;
 }
 

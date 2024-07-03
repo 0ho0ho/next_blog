@@ -1,12 +1,18 @@
 'use client';
 
-import Prism from 'prismjs';
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+import json from 'highlight.js/lib/languages/json';
+import typescript from 'highlight.js/lib/languages/typescript';
+import yaml from 'highlight.js/lib/languages/yaml';
 import { useEffect } from 'react';
-
-import 'prismjs/components/prism-typescript';
-import 'prismjs/components/prism-jsx';
-import 'prismjs/components/prism-tsx';
 import '@styles/markdown.css';
+import 'highlight.js/styles/vs.css';
+
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('typescript', typescript);
+hljs.registerLanguage('json', json);
+hljs.registerLanguage('yaml', yaml);
 
 interface Props {
   content: string;
@@ -14,7 +20,7 @@ interface Props {
 
 const Content = ({ content }: Props) => {
   useEffect(() => {
-    Prism.highlightAll();
+    hljs.highlightAll();
   }, []);
 
   return <div className="mt-5 markdown-body" dangerouslySetInnerHTML={{ __html: content }} />;
